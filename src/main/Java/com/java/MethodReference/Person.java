@@ -2,6 +2,9 @@ package com.java.MethodReference;
 
 import java.time.LocalDate;
 import java.time.chrono.IsoChronology;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Predicate;
 
 
 public class Person {
@@ -39,5 +42,19 @@ public class Person {
     
     public String toString() {
         return this.name+" "+this.emailAddress+" "+this.getAge()+" "+this.gender;
+    }
+    
+    /*
+     * Generalized method to print the person based on the Predicate p type 
+     * implementation passed as lambda expression.
+     * 
+     */
+    
+    public static void printPerson(ArrayList<Person> personList , Predicate<Person> p){
+    	for(Person person : personList){
+    		if(p.test(person)){
+    			System.out.println(person.toString());
+    		}
+    	}
     }
 }

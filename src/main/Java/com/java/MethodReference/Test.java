@@ -41,7 +41,7 @@ public class Test {
 	            "fred@example.com"));
 		
 		personlist.add(new Person(
-            "Jane",
+            "Jany",
             IsoChronology.INSTANCE.date(1990, 7, 15),
             Person.Sex.FEMALE, "jane@example.com"));
 		
@@ -69,11 +69,11 @@ public class Test {
 		compare method of comparator interface.*/
 		Collections.sort(personlist,new ComparisonProvider()::compareByName); 
 		
-	
 		for(Person a : personlist){
 			System.out.println(a.toString());
 		}
-		
+		System.out.println("persons with the gender as MALE.");
+		Person.printPerson(personlist, p -> p.gender == Person.Sex.MALE);
 		
 	}
 	
