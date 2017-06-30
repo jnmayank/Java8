@@ -13,6 +13,7 @@ public class Test {
 		 List<Double> result = new ArrayList<Double>();
 		 list.forEach(x -> result.add(Math.sqrt(f.apply((Integer) x))));
 		 return result;
+		 
 		 }
 	 
 	 
