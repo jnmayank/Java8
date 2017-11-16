@@ -6,5 +6,9 @@ public interface Interface1 {
 	default void flying() {
 		System.out.println("flying..");
 	}
+	
+	default void flyin1g() {
+		System.out.println("flying..");
+	}
 
 }

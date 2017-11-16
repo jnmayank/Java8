@@ -9,6 +9,7 @@ public class Test {
 		Person person = new Person("mayank",addr);
 		
 		addr.setCity("Ghazihabad1");
+		System.out.println(person.getAddress().getCity());
 		
 		person.getAddress().setCity("Ghazihabad2");
 		

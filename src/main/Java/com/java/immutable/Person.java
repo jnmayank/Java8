@@ -5,7 +5,7 @@ public final class Person {
 	private final Address address;
 
 	
-	/*Storing the reference to copy not the reference to original one passed to constructor.*/
+	/*Storing the reference to copy, not the reference to original one passed to constructor.*/
 	Person(String name , Address address){
 		Address copy  = new Address(address.getLine1(), address.getCity(), address.getState());
 		this.address = copy;
